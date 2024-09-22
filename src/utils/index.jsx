@@ -5,7 +5,7 @@ const Suspense = ({ children }) => {
     <SuspenseComponent
       fallback={
         <div className="text-center h-full flex items-center justify-center min-h-screen">
-          <p>Loader...</p>
+          <p>lLoading...</p>
         </div>
       }
     >

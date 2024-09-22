@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const { Title, Text } = Typography;
 const SignUp = () => {
-  const navigate = useNavigate();
+  const navigete = useNavigate();
   const [signUpRequest, { data, isSuccess }] = useSignUpRequestMutation();
   const onFinish = (values) => {
     signUpRequest(values);
@@ -13,7 +13,7 @@ const SignUp = () => {
   console.log(data);
   useEffect(() => {
     if (isSuccess && data.payload?.email) {
-      navigate(`/auth/otp?email=${btoa(data.payload.email)}`);
+      navigete(`/auth/otp?email=${btoa(data.payload.email)}`);
     }
   }, [isSuccess]);
   const onFinishFailed = (errorInfo) => {
